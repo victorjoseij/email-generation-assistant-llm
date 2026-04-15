@@ -1,6 +1,6 @@
-# 📧 Email Generation Assistant (LLM Project)
+#  Email Generation Assistant (LLM Project)
 
-## 🚀 Overview
+## Overview
 This project builds an AI-powered Email Generation Assistant that generates professional emails from structured inputs:
 
 - **Intent** – purpose of the email  
@@ -11,26 +11,26 @@ The system uses **advanced prompt engineering** and a **custom evaluation framew
 
 ---
 
-## 🧠 Key Features
+##  Key Features
 
-### ✅ Advanced Prompt Engineering
+###  Advanced Prompt Engineering
 - Role-based prompting (Executive Assistant persona)
 - Few-shot examples for guidance
 - Structured output constraints
 - Self-verification to ensure fact inclusion
 
-### 📊 Evaluation System
+###  Evaluation System
 - 10 realistic test scenarios
 - Human reference emails
 - Custom evaluation metrics
 
-### 🔍 Model Comparison
+###  Model Comparison
 - Advanced Prompt vs Baseline Prompt
 - Quantitative performance comparison using metrics
 
 ---
 
-## 📏 Custom Metrics
+##  Custom Metrics
 
 ### 1. Fact Coverage Score (FCS)
 Measures how effectively the model includes all required facts.
@@ -60,16 +60,16 @@ Checks adherence to professional email standards:
 
 ---
 
-## 📈 Results Summary
+##  Results Summary
 
 | Strategy           | FCS  | TAS  | PESS | Overall |
 |------------------|------|------|------|--------|
-| Advanced Prompt  | High | High | High | ✅ Best |
-| Baseline Prompt  | Medium | Medium | Medium | ❌ Lower |
+| Advanced Prompt  | High | High | High |  Best |
+| Baseline Prompt  | Medium | Medium | Medium |  Lower |
 
 ---
 
-## ⚙️ How to Run
+##  How to Run
 
 ### 1. Install Dependencies
 ```bash
@@ -81,7 +81,8 @@ Create a .env file in the root directory:
 OPENAI_API_KEY=your_key_here
 OPENAI_MODEL=gpt-4.1-mini
 OPENAI_JUDGE_MODEL=gpt-4.1-mini
-▶️ Run the Application
+
+ Run the Application
 python app.py
 
 You will be prompted to enter:
@@ -94,19 +95,21 @@ The system will generate emails using:
 
 Advanced Prompt Strategy
 Baseline Prompt Strategy
-📊 Run Evaluation
+ Run Evaluation
 python evaluate.py
 
 This will generate:
 
 results.csv → raw scores for all scenarios
 results_summary.json → average metric scores
-🧪 Tech Stack
+
+ Tech Stack
 Python
 OpenAI API
 Prompt Engineering
 LLM Evaluation Framework
-🎯 Conclusion
+
+ Conclusion
 
 Advanced prompting significantly improves:
 
