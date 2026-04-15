@@ -1,0 +1,21 @@
+{
+  "metric_definitions": {
+    "fact_coverage_score": "Matched required fact groups divided by total required fact groups.",
+    "tone_alignment_score": "LLM judge score for requested tone, normalized from 1-5 to 0-1.",
+    "professional_email_structure_score": "Rule-based score for subject, greeting, paragraphing, CTA/closing, sign-off, and length."
+  },
+  "summary": {
+    "advanced": {
+      "fact_coverage_score_avg": 0.933,
+      "tone_alignment_score_avg": 0.885,
+      "professional_email_structure_score_avg": 0.865,
+      "overall_score_avg": 0.895
+    },
+    "baseline": {
+      "fact_coverage_score_avg": 0.725,
+      "tone_alignment_score_avg": 0.68,
+      "professional_email_structure_score_avg": 0.72,
+      "overall_score_avg": 0.708
+    }
+  }
+}

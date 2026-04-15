@@ -1,120 +1,115 @@
-#  Email Generation Assistant (LLM Project)
+# Email Generation Assistant
 
-## Overview
-This project builds an AI-powered Email Generation Assistant that generates professional emails from structured inputs:
+This project implements a prototype **Email Generation Assistant** that generates professional emails from three inputs:
 
-- **Intent** – purpose of the email  
-- **Key Facts** – required information to include  
-- **Tone** – writing style (formal, empathetic, etc.)
+- **Intent**
+- **Key Facts**
+- **Tone**
 
-The system uses **advanced prompt engineering** and a **custom evaluation framework** to ensure high-quality, reliable outputs.
+It also evaluates generation quality with **three custom metrics** tailored to this task and compares two prompting strategies:
 
----
+- **Model A / Strategy A**: Advanced prompt with role prompting + structured constraints + few-shot examples
+- **Model B / Strategy B**: Simple direct prompt baseline
 
-##  Key Features
+## Project Structure
 
-###  Advanced Prompt Engineering
-- Role-based prompting (Executive Assistant persona)
-- Few-shot examples for guidance
-- Structured output constraints
-- Self-verification to ensure fact inclusion
+- `app.py` – main email generation prototype
+- `evaluate.py` – evaluation pipeline for 10 scenarios
+- `scenarios.json` – 10 test scenarios and human reference emails
+- `results.csv` – raw metric output for all scenarios and both strategies
+- `results_summary.json` – metric averages and comparison summary
+- `report.md` – final report content
+- `.env.example` – environment variables
 
-###  Evaluation System
-- 10 realistic test scenarios
-- Human reference emails
-- Custom evaluation metrics
+## Setup
 
-###  Model Comparison
-- Advanced Prompt vs Baseline Prompt
-- Quantitative performance comparison using metrics
-
----
-
-##  Custom Metrics
-
-### 1. Fact Coverage Score (FCS)
-Measures how effectively the model includes all required facts.
-
-**Formula:**  
-FCS = Matched Facts / Total Facts
-
----
-
-### 2. Tone Alignment Score (TAS)
-Evaluates how well the generated email matches the requested tone.
-
-**Method:**  
-LLM-based scoring (1–5 scale, normalized to 0–1)
-
----
-
-### 3. Professional Email Structure Score (PESS)
-Checks adherence to professional email standards:
-
-- Subject line  
-- Greeting  
-- Clear body  
-- Call-to-action  
-- Sign-off  
-- Appropriate length (80–220 words)
-
----
-
-##  Results Summary
-
-| Strategy           | FCS  | TAS  | PESS | Overall |
-|------------------|------|------|------|--------|
-| Advanced Prompt  | High | High | High |  Best |
-| Baseline Prompt  | Medium | Medium | Medium |  Lower |
-
----
-
-##  How to Run
-
-### 1. Install Dependencies
 ```bash
+python -m venv .venv
+source .venv/bin/activate   # Linux/macOS
+# .venv\Scripts\activate    # Windows
+
 pip install -r requirements.txt
-2. Setup Environment
+cp .env.example .env
+```
 
-Create a .env file in the root directory:
+Add your API key in `.env`:
 
+```env
 OPENAI_API_KEY=your_key_here
 OPENAI_MODEL=gpt-4.1-mini
 OPENAI_JUDGE_MODEL=gpt-4.1-mini
+```
 
- Run the Application
+## Run the prototype
+
+```bash
 python app.py
+```
 
-You will be prompted to enter:
+You will be prompted for:
+- Intent
+- Key facts
+- Tone
 
-Intent
-Tone
-Key facts
+The script will generate:
+- Strategy A email
+- Strategy B email
 
-The system will generate emails using:
+## Run evaluation
 
-Advanced Prompt Strategy
-Baseline Prompt Strategy
- Run Evaluation
+```bash
 python evaluate.py
+```
 
-This will generate:
+Outputs:
+- `results.csv`
+- `results_summary.json`
 
-results.csv → raw scores for all scenarios
-results_summary.json → average metric scores
+## Advanced Prompting Technique Used
 
- Tech Stack
-Python
-OpenAI API
-Prompt Engineering
-LLM Evaluation Framework
+Strategy A combines:
+1. **Role prompting** – the model acts as a senior executive communications assistant.
+2. **Structured instructions** – explicit output rules for subject, greeting, body, CTA, and sign-off.
+3. **Few-shot prompting** – examples demonstrating how facts and tone should be incorporated.
+4. **Self-check instruction** – the model is told to verify that all user facts appear naturally in the email before finalizing.
 
- Conclusion
+This is more reliable than a plain “write an email” prompt because it reduces omission of facts and improves tone consistency.
 
-Advanced prompting significantly improves:
+## Custom Metrics
 
-Fact inclusion accuracy
-Tone consistency
-Professional email structure
+### 1. Fact Coverage Score (FCS)
+Measures how many required key facts from the scenario appear in the generated email.
 
-This demonstrates that combining prompt engineering with evaluation-driven design makes LLM systems more reliable and production-ready.
+**Logic**:
+- Each scenario contains required facts and keyword patterns for each fact.
+- Score = matched facts / total required facts
+
+### 2. Tone Alignment Score (TAS)
+Measures whether the generated email matches the requested tone.
+
+**Logic**:
+- An LLM judge scores tone fit from 1 to 5 using a strict rubric.
+- Final normalized score = score / 5
+
+### 3. Professional Email Structure Score (PESS)
+Measures whether the output looks like a professional email.
+
+**Logic**:
+Rule-based score using:
+- greeting present
+- clear opening purpose
+- body with facts
+- closing / CTA
+- sign-off present
+- reasonable length (80–220 words)
+
+Score = earned checks / total checks
+
+## Recommendation
+
+Based on evaluation, the advanced prompting strategy should typically perform better in:
+- fact retention
+- tone consistency
+- professional formatting
+
+Use Strategy A in production.

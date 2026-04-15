@@ -1,0 +1,293 @@
+[
+  {
+    "id": 1,
+    "intent": "Follow up after a client discovery meeting",
+    "tone": "formal",
+    "key_facts": [
+      "Thank the client for meeting on Tuesday",
+      "Summarize that they want automation for invoice processing",
+      "Mention the proposed pilot timeline of 3 weeks",
+      "Request access to 20 sample invoices"
+    ],
+    "fact_patterns": [
+      [
+        "thank",
+        "tuesday"
+      ],
+      [
+        "automation",
+        "invoice"
+      ],
+      [
+        "3 week",
+        "pilot"
+      ],
+      [
+        "20",
+        "sample invoice"
+      ]
+    ],
+    "reference_email": "Subject: Follow-Up on Tuesday's Discovery Meeting\n\nDear Ms. Rao,\n\nThank you for meeting with us on Tuesday. It was valuable to learn more about your current workflow and the need to automate invoice processing.\n\nAs discussed, we believe a pilot can be completed within three weeks to demonstrate feasibility and expected gains. To begin that work, could you please share access to 20 sample invoices at your convenience?\n\nOnce we receive the documents, we will prepare the pilot plan and next steps.\n\nBest regards,\nVictor Jose"
+  },
+  {
+    "id": 2,
+    "intent": "Request clarification on a job offer",
+    "tone": "professional and polite",
+    "key_facts": [
+      "Express appreciation for the offer",
+      "Ask whether the role is hybrid or fully onsite",
+      "Ask about the expected joining date",
+      "Mention excitement about the AI Engineer opportunity"
+    ],
+    "fact_patterns": [
+      [
+        "appreciate",
+        "offer"
+      ],
+      [
+        "hybrid",
+        "onsite"
+      ],
+      [
+        "joining",
+        "date"
+      ],
+      [
+        "excited",
+        "ai engineer"
+      ]
+    ],
+    "reference_email": "Subject: Clarification Regarding AI Engineer Offer\n\nDear Hiring Team,\n\nThank you very much for extending the AI Engineer opportunity. I truly appreciate the offer and am excited about the possibility of joining your team.\n\nBefore I proceed, I would be grateful if you could clarify whether the role is hybrid or fully onsite. I would also appreciate confirmation of the expected joining date.\n\nThank you again for the opportunity. I look forward to your response.\n\nSincerely,\nVictor Jose"
+  },
+  {
+    "id": 3,
+    "intent": "Send an apology for delayed project delivery",
+    "tone": "empathetic",
+    "key_facts": [
+      "Acknowledge the delay in submitting the dashboard",
+      "Explain that data validation took longer than expected",
+      "Commit to delivering the final version by Friday 5 PM",
+      "Offer to share the current draft immediately"
+    ],
+    "fact_patterns": [
+      [
+        "delay",
+        "dashboard"
+      ],
+      [
+        "data validation",
+        "longer"
+      ],
+      [
+        "friday",
+        "5 pm"
+      ],
+      [
+        "current draft",
+        "immediately"
+      ]
+    ],
+    "reference_email": "Subject: Apology for the Delay in Dashboard Delivery\n\nDear Team,\n\nI sincerely apologize for the delay in submitting the dashboard. I understand the inconvenience this may cause and appreciate your patience.\n\nThe primary reason for the delay is that the data validation process took longer than expected, and I wanted to ensure the final output is accurate. I am committed to delivering the final version by Friday at 5 PM.\n\nIf helpful, I can share the current draft immediately so you have visibility into the progress.\n\nThank you for your understanding.\n\nBest regards,\nVictor Jose"
+  },
+  {
+    "id": 4,
+    "intent": "Ask a professor for a recommendation letter",
+    "tone": "respectful",
+    "key_facts": [
+      "Mention applying for an MSc scholarship",
+      "Mention the deadline is April 30",
+      "Say you studied Applied Physics under them",
+      "Offer to send resume and statement of purpose"
+    ],
+    "fact_patterns": [
+      [
+        "msc",
+        "scholarship"
+      ],
+      [
+        "april 30"
+      ],
+      [
+        "applied physics"
+      ],
+      [
+        "resume",
+        "statement of purpose"
+      ]
+    ],
+    "reference_email": "Subject: Request for Recommendation Letter\n\nDear Professor,\n\nI hope you are doing well. I am currently applying for an MSc scholarship and wanted to respectfully ask whether you would be willing to provide me with a recommendation letter.\n\nI had the privilege of studying Applied Physics under your guidance, and I believe your recommendation would strongly support my application. The submission deadline is April 30.\n\nIf you are comfortable supporting me, I would be happy to send my resume and statement of purpose for reference.\n\nThank you for considering my request.\n\nWarm regards,\nVictor Jose"
+  },
+  {
+    "id": 5,
+    "intent": "Remind a recruiter about an interview reschedule",
+    "tone": "polite and concise",
+    "key_facts": [
+      "Interview was originally planned for Monday",
+      "You requested rescheduling due to a university exam",
+      "Ask for any updated slot this week",
+      "Reconfirm continued interest in the role"
+    ],
+    "fact_patterns": [
+      [
+        "monday"
+      ],
+      [
+        "resched",
+        "university exam"
+      ],
+      [
+        "this week",
+        "slot"
+      ],
+      [
+        "interest",
+        "role"
+      ]
+    ],
+    "reference_email": "Subject: Follow-Up on Interview Rescheduling\n\nDear Recruiter,\n\nI hope you are well. I wanted to follow up regarding the interview that was originally planned for Monday. As mentioned earlier, I had requested a reschedule due to a university exam.\n\nCould you please let me know if there is any updated slot available this week? I remain very interested in the role and would be glad to attend at your convenience.\n\nThank you for your time.\n\nBest regards,\nVictor Jose"
+  },
+  {
+    "id": 6,
+    "intent": "Send meeting notes to internal team",
+    "tone": "clear and collaborative",
+    "key_facts": [
+      "Architecture discussion covered API, database, and authentication",
+      "Frontend owner is Priya",
+      "Backend API draft is due on Wednesday",
+      "Next sync is scheduled for 10 AM Friday"
+    ],
+    "fact_patterns": [
+      [
+        "api",
+        "database",
+        "authentication"
+      ],
+      [
+        "priya"
+      ],
+      [
+        "wednesday",
+        "backend api"
+      ],
+      [
+        "10 am",
+        "friday"
+      ]
+    ],
+    "reference_email": "Subject: Summary of Today's Architecture Discussion\n\nHi Team,\n\nThank you for the productive discussion today. Here is a quick summary of the key decisions and next steps.\n\nWe reviewed the architecture across the API, database, and authentication layers. Priya will take ownership of the frontend. The backend API draft is expected by Wednesday.\n\nOur next sync is scheduled for Friday at 10 AM.\n\nPlease let me know if I missed anything.\n\nRegards,\nVictor Jose"
+  },
+  {
+    "id": 7,
+    "intent": "Ask a vendor for pricing details",
+    "tone": "formal",
+    "key_facts": [
+      "Need pricing for 100 user licenses",
+      "Ask if annual billing discount is available",
+      "Request SLA details",
+      "Need response before Thursday procurement review"
+    ],
+    "fact_patterns": [
+      [
+        "100",
+        "user license"
+      ],
+      [
+        "annual",
+        "discount"
+      ],
+      [
+        "sla"
+      ],
+      [
+        "thursday",
+        "procurement review"
+      ]
+    ],
+    "reference_email": "Subject: Request for Pricing and SLA Details\n\nDear Vendor Team,\n\nWe are currently evaluating solutions and would appreciate your support with a few details.\n\nCould you please share pricing for 100 user licenses and confirm whether an annual billing discount is available? We would also appreciate receiving your SLA details for review.\n\nAs we have a procurement review scheduled for Thursday, it would be helpful to receive your response before then.\n\nThank you in advance.\n\nSincerely,\nVictor Jose"
+  },
+  {
+    "id": 8,
+    "intent": "Respond to a customer complaint",
+    "tone": "empathetic and professional",
+    "key_facts": [
+      "Acknowledge delayed delivery",
+      "Confirm refund has been initiated",
+      "State refund will reflect in 5 to 7 business days",
+      "Offer direct support for any further issue"
+    ],
+    "fact_patterns": [
+      [
+        "delayed delivery"
+      ],
+      [
+        "refund",
+        "initiated"
+      ],
+      [
+        "5",
+        "7",
+        "business day"
+      ],
+      [
+        "direct support"
+      ]
+    ],
+    "reference_email": "Subject: Update on Your Concern\n\nDear Customer,\n\nI sincerely apologize for the delayed delivery and the inconvenience caused.\n\nI want to confirm that your refund has been initiated, and the amount should reflect in your account within 5 to 7 business days. If you face any further issue, please feel free to reply directly and I will personally assist you.\n\nThank you for your patience and understanding.\n\nBest regards,\nVictor Jose"
+  },
+  {
+    "id": 9,
+    "intent": "Request project extension from manager",
+    "tone": "honest and accountable",
+    "key_facts": [
+      "Current blocker is integration with third-party API",
+      "Need two additional working days",
+      "Core module is already complete",
+      "Will provide daily progress updates"
+    ],
+    "fact_patterns": [
+      [
+        "third-party api",
+        "integration"
+      ],
+      [
+        "two",
+        "working day"
+      ],
+      [
+        "core module",
+        "complete"
+      ],
+      [
+        "daily progress update"
+      ]
+    ],
+    "reference_email": "Subject: Request for Short Project Extension\n\nDear Manager,\n\nI wanted to provide a quick status update and request a short extension on the current timeline.\n\nThe main blocker at this stage is the integration with the third-party API. The core module is already complete, but I need two additional working days to finish the remaining integration and testing. I will also provide daily progress updates so you have clear visibility.\n\nThank you for your understanding.\n\nRegards,\nVictor Jose"
+  },
+  {
+    "id": 10,
+    "intent": "Thank a panel after interview",
+    "tone": "warm and professional",
+    "key_facts": [
+      "Thank them for the time today",
+      "Mention discussion about recommendation systems",
+      "Mention excitement about solving real business problems",
+      "Offer to share any additional information"
+    ],
+    "fact_patterns": [
+      [
+        "thank",
+        "today"
+      ],
+      [
+        "recommendation system"
+      ],
+      [
+        "real business problem"
+      ],
+      [
+        "additional information"
+      ]
+    ],
+    "reference_email": "Subject: Thank You for Today's Interview\n\nDear Panel,\n\nThank you for taking the time to speak with me today. I genuinely enjoyed our discussion, especially the conversation around recommendation systems and how they can be applied to real business problems.\n\nThe discussion increased my excitement about the opportunity to contribute and solve meaningful challenges with your team. Please feel free to let me know if I can share any additional information.\n\nThank you once again.\n\nBest regards,\nVictor Jose"
+  }
+]
