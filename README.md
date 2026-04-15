@@ -1,83 +1,43 @@
-#  Email Generation Assistant (LLM Project)
+# 📧 Email Generation Assistant (LLM Project)
 
-##  Overview
-This project builds an AI-powered Email Generation Assistant that creates professional emails based on:
-
-- Intent
-- Key Facts
-- Tone
-
-It uses advanced prompt engineering and a custom evaluation framework to measure output quality.
+![Python](https://img.shields.io/badge/Python-3.9+-blue.svg)
+![OpenAI](https://img.shields.io/badge/LLM-OpenAI-green)
+![Status](https://img.shields.io/badge/Status-Completed-success)
+![Evaluation](https://img.shields.io/badge/Evaluation-Custom%20Metrics-orange)
 
 ---
 
-##  Key Features
+## 🚀 Overview
+This project builds an AI-powered Email Generation Assistant that generates professional emails from structured inputs:
 
- Advanced Prompt Engineering  
-- Role-based prompting  
-- Few-shot examples  
-- Structured output constraints  
-- Self-verification step  
+- **Intent** – purpose of the email  
+- **Key Facts** – required information  
+- **Tone** – writing style (formal, empathetic, etc.)
 
- Evaluation System  
-- 10 real-world scenarios  
-- Human reference emails  
-- 3 custom evaluation metrics  
-
- Model Comparison  
-- Advanced Prompt vs Baseline Prompt  
-- Quantitative performance comparison  
+The system leverages **advanced prompt engineering** and a **custom evaluation framework** to ensure reliability and quality.
 
 ---
 
-##  Custom Metrics
+## ✨ Features
+
+### 🧠 Advanced Prompt Engineering
+- Role-based prompting (Executive Assistant persona)
+- Few-shot examples
+- Structured constraints
+- Self-verification (fact-check before output)
+
+### 📊 Evaluation Framework
+- 10 real-world scenarios
+- Human reference emails
+- 3 custom evaluation metrics
+
+### 🔍 Model Comparison
+- Advanced Prompt vs Baseline Prompt
+- Quantitative evaluation across all scenarios
+
+---
+
+## 📏 Custom Metrics
 
 ### 1. Fact Coverage Score (FCS)
-Measures how well the model includes required facts.
-
-### 2. Tone Alignment Score (TAS)
-LLM-based scoring of tone correctness.
-
-### 3. Professional Email Structure Score (PESS)
-Checks formatting: subject, greeting, CTA, sign-off, etc.
-
----
-
-##  Results Summary
-
-| Strategy | FCS | TAS | PESS | Overall |
-|----------|-----|-----|------|--------|
-| Advanced Prompt | High | High | High |  Best |
-| Baseline Prompt | Medium | Medium | Medium |  Lower |
-
----
-
-##  How to Run
-
-```bash
-pip install -r requirements.txt
-cp.env
-Add your OpenAI key:
-OPENAI_API_KEY=your_key_here
-
-Run App
-python app.py
-
-Run Evaluation
-python evaluate.py
-
-**## Tech Stack**
-Python
-OpenAI API
-Prompt Engineering
-Evaluation Metrics Design
-**##Conclusion**
-
-**Advanced prompting significantly improves:
-
-Fact inclusion
-Tone consistency
-Email professionalism
-
-This makes it production-ready for real-world AI assistants.
-**
+Measures inclusion of all required facts.
